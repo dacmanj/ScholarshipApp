@@ -31,12 +31,14 @@ gem 'jquery-rails'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 group :development do
-  gem 'rspec-rails', '2.0.1'
+  gem 'rspec-rails'
+  gem 'spork', '0.9.0.rc8'
+  
 end
 
 group :test do
   # Pretty printed test output
-  gem 'rspec','2.0.1'
+  gem 'rspec'
   gem 'webrat','0.7.1'
   gem 'turn', '0.8.2', :require => false
 end
