@@ -32,13 +32,17 @@ gem 'jquery-rails'
 
 group :development do
   gem 'rspec-rails'
-  gem 'spork', '0.9.0.rc8'
-  
+  gem "rspec", "~> 2.7.0"
+  gem "annotate", "~> 2.4.1.beta1"
+  gem 'faker', '0.3.1'
 end
 
 group :test do
   # Pretty printed test output
-  gem 'rspec'
+  gem "rspec", "~> 2.7.0"
+  gem 'spork', '0.9.0.rc8'
   gem 'webrat','0.7.1'
   gem 'turn', '0.8.2', :require => false
+  gem 'factory_girl_rails'
+  
 end
