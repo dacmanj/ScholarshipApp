@@ -13,11 +13,13 @@
 #
 class User < ActiveRecord::Base
   attr_accessor :password
-  attr_accessible :first_name, :last_name, :email, :password, :password_confirmation
+  attr_accessible :first_name, :middle_initial, :last_name, :email, :password, :password_confirmation
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
     validates :first_name,  :presence => true,
                       :length   => { :maximum => 50 }
+    validates :middle_initial,
+                      :length       => { :within => 0..1 }   
     validates :last_name,  :presence => true,
                       :length   => { :maximum => 50 }
     validates :email, :presence => true,
